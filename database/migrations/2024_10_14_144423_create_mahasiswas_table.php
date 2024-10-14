@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
             $table->string("nama_mahasiswa");
-            $table->string("kota_asal");
-            $table->string("kode_kota");
+            $table->unsignedBigInteger('kota_asal');
+            $table->unsignedBigInteger('kode_kota');
             $table->timestamps();
+
+            $table->foreign('kota_asal')->references('id')->on('asal_kotas')->onDelete('cascade');
+            $table->foreign('kode_kota')->references('id')->on('kode_kotas')->onDelete('cascade');
         });
     }
 

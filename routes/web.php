@@ -20,7 +20,13 @@ Route::get('/mahasiswa/{id}', function ($id){
     if(!$mhs){
         abort(404);
     }
-    return view('detailmahasiswa', ['anggota' => $mhs]);
+
+    $mhs->load('asalKota', 'kodeKota');
+    return view('detailmahasiswa', [
+        'anggota' => $mhs,
+        'asalkota' => $mhs -> asalkota,
+        'kodekota' => $mhs -> kodekota,
+    ]);
 });
 
 Route::get('/anggota', function (){
@@ -28,18 +34,13 @@ Route::get('/anggota', function (){
         "daftaranggota" => [
             [
                 "id" => 1,
-                "nama" => "nama-1",
-                "nim" => "nim-1,"
+                "nama" => "Raden Hanif Satria Adjistama",
+                "nim" => "K3520064",
             ],
             [
                 "id" => 2,
-                "nama" => "nama-2",
-                "nim" => "nim-2,"
-            ],
-            [
-                "id" => 3,
-                "nama" => "nama-3",
-                "nim" => "nim-3,"
+                "nama" => "Jaisy Muhammad",
+                "nim" => "K3522036",
             ]
         ]
     ]);
