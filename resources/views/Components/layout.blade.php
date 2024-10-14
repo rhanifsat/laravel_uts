@@ -28,9 +28,9 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-        <a href="/mahasiswa" class="text-sm font-semibold leading-6 text-gray-900">Data Mahasiswa</a>
-        <a href="/anggota" class="text-sm font-semibold leading-6 text-gray-900">Anggota</a>
+        <x-nav-link href="/" :aktif="request() -> is('/')">Home</x-nav-link>
+        <x-nav-link href="/mahasiswa" :aktif="request() -> is('mahasiswa')">Data Mahasiswa</x-nav-link>
+        <x-nav-link href="/anggota" :aktif="request() -> is('anggota')">Anggota</x-nav-link>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
