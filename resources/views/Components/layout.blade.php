@@ -29,7 +29,7 @@
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-        <a href="/dataMahasiswa" class="text-sm font-semibold leading-6 text-gray-900">Data Mahasiswa</a>
+        <a href="/mahasiswa" class="text-sm font-semibold leading-6 text-gray-900">Data Mahasiswa</a>
         <a href="/anggota" class="text-sm font-semibold leading-6 text-gray-900">Anggota</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
